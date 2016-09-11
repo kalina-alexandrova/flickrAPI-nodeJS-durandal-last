@@ -1,0 +1,18 @@
+<section>
+    <h2 data-bind="text: displayName"></h2>
+    <div id="imagesList" class="row pre-scrollable" data-bind="foreach: images">
+        <div class="col-sm-6 col-md-3">
+            <span data-bind="text: $index" style="visibility:hidden"> </span>
+            <a href="#" class="thumbnail" data-bind="click:$parent.select">
+                <img class="lazy flickr" data-bind="attr: {'data-original' : media.m, src : media.m }" />
+            </a>
+            <a data-bind="attr: { href: link}">Photo title</a>&nbsp;
+            <label>by</label>&nbsp;
+            <a data-bind="attr: { href: authorUrl}">author</a></a>
+            </br>
+            <label>Description:</label><span data-bind="text: newDescription"></span></br>
+            <label>Tags:</label>&nbsp;
+            <p class="searching" data-bind="text: tags"></p>
+        </div>
+    </div>
+</section>

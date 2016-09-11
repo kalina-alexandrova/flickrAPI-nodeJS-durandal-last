@@ -1,0 +1,92 @@
+/* Colors for my Website */
+@color-orange: #ff9900;
+@color-gray_light: #cccccc; 
+@color-black_dark: #333333;  
+@color-white: #ffffff;  
+@default-font-size: 16px;
+.border-radius (@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
+.box-shadow (@x: 0px, @y: 3px, @blur: 5px, @alpha: 0.5) {
+	-webkit-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+	-moz-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+	box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+}
+.transform (@rotate: 90deg, @scale: 1, @skew: 1deg, @translate: 10px) {
+	-webkit-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+	-moz-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+	-o-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+	-ms-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+	transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+}
+.gradient (@origin: left, @start: #ffffff, @stop: #000000) {
+	background-color: @start;
+	background-image: -webkit-linear-gradient(@origin, @start, @stop);
+	background-image: -moz-linear-gradient(@origin, @start, @stop);
+	background-image: -o-linear-gradient(@origin, @start, @stop);
+	background-image: -ms-linear-gradient(@origin, @start, @stop);
+	background-image: linear-gradient(@origin, @start, @stop);
+}
+body {
+    .gradient(left, #6F736E, #333333);
+    color: @color-gray_light;
+    font-family: "Verdana";
+    font-style: italic;
+    .jumbotron {
+        height: 800px !important;
+    }
+    a {
+        color:@color-orange;
+        text-decoration: "none";
+        &:hover {
+            color: #3EA818;
+        }
+    }
+    h2 {
+        color: @color-orange;       
+    }
+    h3 {
+        color: @color-white;
+    }
+     
+    section > div > div {
+        width: 250px;
+        height : 510px;
+        .box-shadow(5px, 5px, 6px, 0.3);   
+        .transform(2deg, 1, 1deg, 0px);
+    }
+    
+    .pre-scrollable {
+        max-height: 550px !important;
+    }
+    
+    section > span {
+        font-size: @default-font-size !important;
+    }
+    
+    .flickr {
+        height: 180px;
+        width: 260px;
+    }
+    
+    .searching {
+        font-size: @default-font-size !important;
+        display: inline;
+    }
+        
+    .search-form { 
+        position: relative;
+        top: -865px;
+        left: 800px;
+        
+        input {
+             width: 340px;
+             height: 30px;
+             .border-radius(20px);
+             font-size: @default-font-size;
+        }        
+    }
+}
+

@@ -1,0 +1,7 @@
+<div class="jumbotron text-center">
+    <!--All the client-side 'pages' called by hash routes will render in this div tag: -->
+    <div data-bind="router: { transition: 'entrance' }"></div>
+</div>
+<form class="search-form" data-bind="submit:search">
+    <input type="text" class="search-query" placeholder="Search" data-bind="value:searchTerm, valueUpdate: 'afterkeydown'" />
+</form>

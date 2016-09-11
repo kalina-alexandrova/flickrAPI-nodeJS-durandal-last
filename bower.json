@@ -1,0 +1,11 @@
+{
+    "name": "node-knockout-durandal",
+    "version": "0.1.0",
+    "authors": [
+        "Kalina Stoilova"
+    ],
+    "dependencies": {
+        "Durandal": "durandal#~2.1.0",
+        "knockout": "~3.4.0"
+    }
+}
